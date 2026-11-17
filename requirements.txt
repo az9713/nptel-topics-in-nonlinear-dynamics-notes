@@ -1,0 +1,4 @@
+Markdown==3.8.2
+numpy==2.2.6
+scipy==1.16.0
+matplotlib==3.9.3

@@ -1,0 +1,89 @@
+:root {
+  color-scheme: dark;
+  --background: #101620;
+  --panel: #17202d;
+  --text: #e9edf3;
+  --muted: #afbcd0;
+  --line: #334156;
+  --accent: #a4d8f0;
+  --measure: 76ch;
+  font-family: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  font-size: 17px;
+}
+* { box-sizing: border-box; }
+body { margin: 0; color: var(--text); background: var(--background); line-height: 1.65; }
+a { color: var(--accent); text-underline-offset: 0.18em; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.skip { position: absolute; top: -10rem; left: 1rem; background: var(--panel); padding: .5rem; }
+.skip:focus { top: .2rem; z-index: 2; }
+.site-header {
+  border-bottom: 1px solid var(--line);
+  padding: .9rem max(1.2rem, calc((100% - 70rem) / 2));
+  display: flex; justify-content: space-between; align-items: center; gap: .6rem 1.5rem;
+  flex-wrap: wrap; background: var(--panel);
+}
+.site-header nav, .recordings, .chapter-nav { display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; }
+.brand { color: var(--text); text-decoration: none; font-weight: 700; }
+main { margin: 0 auto; padding: clamp(1.4rem, 4vw, 3.5rem) 1.2rem 4rem; }
+.reading { max-width: calc(var(--measure) + 2.4rem); }
+.catalog { max-width: 72.4rem; }
+h1, h2, h3, h4 { font-family: "Source Sans 3", "Segoe UI", system-ui, sans-serif; line-height: 1.2; }
+h1 { font-size: clamp(2.2rem, 5.5vw, 4rem); letter-spacing: -.035em; margin: .18em 0 .5em; }
+h2 { font-size: clamp(1.38rem, 2.8vw, 2rem); margin-top: 1.8em; }
+h3 { font-size: 1.23rem; }
+p { margin: .8em 0 1em; }
+.context { font-size: .88rem; color: var(--muted); }
+.summary { max-width: 61ch; font-size: 1.22rem; }
+.intro { margin-bottom: 1.8rem; }
+.toc { padding: .2rem 1rem; border-left: 3px solid var(--line); margin-block: 1.7rem; }
+.toc > ul { padding-left: 1.2rem; }
+.recordings { margin-bottom: 1.4rem; }
+.chapters { list-style-position: inside; padding: 0; display: grid; gap: 0 1.5rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); }
+.chapters li { border-top: 1px solid var(--line); padding: .85rem 0 1.25rem; }
+.chapters li::marker { color: var(--muted); font-size: .85rem; }
+.chapters h3 { display: inline; margin: 0; }
+.chapters p { font-size: .91rem; margin: .3rem 0 0; }
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: .93rem; }
+th, td { text-align: left; padding: .58rem; border-bottom: 1px solid var(--line); }
+th { background: var(--panel); }
+.lab-list li { border-bottom: 1px solid var(--line); padding: .65rem 0; }
+.lab-list li a + a { margin-left: .9rem; }
+.equation, pre { max-width: 100%; overflow: auto; }
+pre, code { background: var(--panel); }
+pre { padding: .85rem; }
+code { padding: .12em .24em; }
+pre code { padding: 0; }
+blockquote { margin-inline: 0; padding-left: 1rem; border-left: 3px solid var(--line); }
+img { display: block; max-width: 100%; height: auto; }
+figure { margin-inline: 0; }
+figcaption { font-size: .94rem; color: var(--muted); }
+.chapter-nav { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line); justify-content: space-between; }
+footer { padding: 1rem; text-align: center; color: var(--muted); background: var(--panel); font-size: .86rem; }
+@media print {
+  :root { color-scheme: light; --text: #111; --background: white; --panel: #eee; --accent: #111; --muted: #444; }
+  .site-header, .skip, .toc, .chapter-nav, footer { display: none; }
+  main { max-width: 100%; padding: 0; }
+  h2, h3 { break-after: avoid; }
+  figure, .equation { break-inside: avoid; }
+}
+.math {
+  display: inline-block;
+  max-width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+  vertical-align: middle;
+}
+.math::-webkit-scrollbar { display: none; }
+.search { margin-block: 1.7rem; }
+.search label { display: block; font-weight: 600; }
+.search input {
+  width: min(100%, 25rem); padding: .55rem .75rem; margin-top: .4rem;
+  border: 1px solid var(--line); border-radius: .3rem; color: var(--text);
+  background: var(--panel); font: inherit;
+}
+.search input:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.search p { color: var(--muted); font-size: .91rem; }
+.search p:empty { display: none; }
+[hidden] { display: none !important; }
+@media print { .search { display: none; } }

@@ -1,0 +1,19 @@
+{
+  "playlist": "https://www.youtube.com/playlist?list=PLbMVogVj5nJQKk1E7OUQs_TcW_zQoaO4t",
+  "course": "https://nptel.ac.in/courses/115106059",
+  "chapters": [
+    [1, 2, "Flows, equilibria, and linearization"],
+    [3, 4, "Planar phase portraits and invariant manifolds"],
+    [5, 6, "Hamiltonian flows and phase-space volume"],
+    [7, 9, "Action–angle coordinates, separatrices, and Hamiltonian symmetry"],
+    [10, 11, "Bifurcations and limit cycles"],
+    [12, 14, "The Poincaré index and qualitative diagnostics"],
+    [15, 16, "The rotating hoop and routes to complex dynamics"],
+    [17, 18, "One-dimensional maps and period doubling"],
+    [19, 20, "Invariant densities, intermittency, and the baker map"],
+    [21, 22, "What survives coarse graining?"],
+    [23, 25, "Markov models, recurrence, and diffusion"],
+    [26, 27, "Fractal sets, torus maps, and dynamical diagnostics"],
+    [28, 29, "Langevin motion from momentum to diffusion"]
+  ]
+}

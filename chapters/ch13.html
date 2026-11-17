@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark light">
+<title>Langevin motion from momentum to diffusion · Topics in Nonlinear Dynamics</title>
+<link rel="stylesheet" href="../assets/reader.css">
+<script defer src="../assets/math-config.js"></script><script defer src="../assets/mathjax-tex-svg.js"></script><script defer src="../assets/reader.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <a class="brand" href="../index.html">Topics in Nonlinear Dynamics</a>
+  <nav aria-label="Reader"><a href="../index.html">Chapters</a><a href="../study-guide.html">Study guide</a><a href="../source-map.html">Lectures</a><a href="../laboratory.html">Labs</a></nav>
+</header>
+<main id="main" class="reading"><p class="context">Chapter 13 · <a href="../source-map.html#l28">Lectures 28–29</a></p><h1>Langevin motion from momentum to diffusion</h1><nav class="recordings" aria-label="Source recordings"><a href="https://www.youtube.com/watch?v=4EAPQtw1Bis">L28</a> <a href="https://www.youtube.com/watch?v=gW_ImQ568Po">L29</a></nav><p>An experiment records the position of a particle suspended in a liquid. If we estimate diffusion by dividing mean-square displacement by elapsed time, the answer changes with the camera's sampling interval. This chapter derives the crossover. The starting model describes a velocity driven by thermal collisions and damped by friction. Integrating velocity gives nearly ballistic motion on short intervals. On long intervals the same model produces the familiar diffusive law.</p>
+<div class="toc">
+<ul>
+<li><a href="#thermal-forcing-needs-a-dissipative-partner-l28-0604">Thermal forcing needs a dissipative partner (L28 06:04)</a></li>
+<li><a href="#conditional-relaxation-fixes-the-noise-amplitude-l28-2601">Conditional relaxation fixes the noise amplitude (L28 26:01)</a></li>
+<li><a href="#the-ornsteinuhlenbeck-kernel-and-correlation-time-l28-4322-l29-0549">The Ornstein–Uhlenbeck kernel and correlation time (L28 43:22) · L29 05:49</a></li>
+<li><a href="#position-alone-hides-the-velocity-state-l29-1001">Position alone hides the velocity state (L29 10:01)</a></li>
+<li><a href="#displacement-crosses-from-ballistic-to-diffusive-l29-2002">Displacement crosses from ballistic to diffusive (L29 20:02)</a></li>
+<li><a href="#the-diffusion-equation-is-a-long-time-description-l29-2801">The diffusion equation is a long-time description (L29 28:01)</a></li>
+<li><a href="#state-dependent-noise-and-the-correlation-formula-l29-4401">State-dependent noise and the correlation formula (L29 44:01)</a></li>
+<li><a href="#laboratory">Laboratory</a></li>
+<li><a href="#exercises">Exercises</a></li>
+<li><a href="#sources-and-continuation">Sources and continuation</a></li>
+</ul>
+</div>
+<h2 id="thermal-forcing-needs-a-dissipative-partner-l28-0604">Thermal forcing needs a dissipative partner (<a href="https://www.youtube.com/watch?v=4EAPQtw1Bis&amp;t=364s">L28 06:04</a>)</h2>
+<p>Consider one component <span class="math">\(V_t\)</span> of a particle's velocity at time <span class="math">\(t\)</span>. The particle has mass <span class="math">\(m&gt;0\)</span> and the surrounding fluid is at absolute temperature <span class="math">\(T&gt;0\)</span>. Ignore external forces and approximate the rapidly fluctuating net collision force as zero-mean white noise. To give the model an ordinary integral meaning, let <span class="math">\(W_t\)</span> be standard Brownian motion: a continuous Gaussian process starting at <span class="math">\(W_0=0\)</span> with independent increments of mean zero and variance equal to the increment duration. The increment <span class="math">\(\sqrt{Q}\,dW_t\)</span> represents the impulse over time <span class="math">\(dt\)</span>, with <span class="math">\(Q\)</span> in squared impulse per time. Formally the force covariance is <span class="math">\(Q\delta(t-s)\)</span>, where the Dirac delta is defined by integration against a test function. A physical collision force has finite correlation time. The approximation replaces it by its short-correlation limit on the observational scales of interest.</p>
+<p>If <span class="math">\(m\,dV_t=\sqrt Q\,dW_t\)</span> alone, then <span class="math">\(V_t=V_0+\sqrt Q\,W_t/m\)</span>. For fixed initial velocity, the conditional mean stays at <span class="math">\(V_0\)</span> and the conditional variance grows as <span class="math">\(Qt/m^2\)</span>. In a fluid the mean motion relative to the bath should relax, and the velocity variance at thermal equilibrium is fixed. The noise-only model heats the particle without bound. Add linear drag force <span class="math">\(-m\gamma V_t\)</span> with relaxation rate <span class="math">\(\gamma&gt;0\)</span>:</p>
+<div class="equation">\[dV_t=-\gamma V_t\,dt+\frac{\sqrt Q}{m}\,dW_t.\]</div>
+
+<p>The rate <span class="math">\(\gamma\)</span> has units of inverse time. The resistance coefficient multiplying velocity in the force equation is <span class="math">\(m\gamma\)</span>, with units of mass per time. The linear approximation presumes a regime where that drag law makes physical sense.</p>
+<h2 id="conditional-relaxation-fixes-the-noise-amplitude-l28-2601">Conditional relaxation fixes the noise amplitude (<a href="https://www.youtube.com/watch?v=4EAPQtw1Bis&amp;t=1561s">L28 26:01</a>)</h2>
+<p>Multiplying by <span class="math">\(e^{\gamma t}\)</span> and integrating gives the velocity from fixed <span class="math">\(V_0=v_0\)</span>:</p>
+<div class="equation">\[V_t=v_0e^{-\gamma t}+\frac{\sqrt Q}{m}\int_0^t e^{-\gamma(t-s)}\,dW_s.\]</div>
+
+<p>The noise term is a limit of sums of independent normal increments weighted by the kernel. Its mean is zero; its variance is <span class="math">\((Q/m^2)\int_0^t e^{-2\gamma(t-s)}\,ds\)</span>. This is the deterministic-integrand form of the Itô isometry. The resulting Gaussian transition has conditional mean <span class="math">\(v_0e^{-\gamma t}\)</span> and conditional variance <span class="math">\((Q/2m^2\gamma)(1-e^{-2\gamma t})\)</span>.</p>
+<p>In thermal equilibrium, equipartition requires <span class="math">\(\mathbb E[m V^2/2]=k_BT/2\)</span> for the single quadratic degree of freedom, with <span class="math">\(k_B\)</span> Boltzmann's constant. Define <span class="math">\(\sigma_v^2=k_BT/m\)</span>. Matching the long-time variance to this value fixes the forcing:</p>
+<div class="equation">\[Q=2m^2\gamma\sigma_v^2=2m\gamma k_BT.\]</div>
+
+<p>This fluctuation–dissipation relation is a consistency condition for this equilibrium model. Increasing drag shortens the relaxation time, while increasing the noise strength in the required proportion keeps the same equilibrium velocity width. A fixed initial velocity relaxes toward equilibrium. An independent initial draw from the centered Gaussian with variance <span class="math">\(\sigma_v^2\)</span> already gives a stationary velocity process. Uhlenbeck and Ornstein treated velocity and displacement moments in this Brownian model, including the small-time regime resolved by the inertia term. <a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.36.823">Uhlenbeck and Ornstein (1930)</a></p>
+<h2 id="the-ornsteinuhlenbeck-kernel-and-correlation-time-l28-4322-l29-0549">The Ornstein–Uhlenbeck kernel and correlation time (<a href="https://www.youtube.com/watch?v=4EAPQtw1Bis&amp;t=2602s">L28 43:22</a>) · <a href="https://www.youtube.com/watch?v=gW_ImQ568Po&amp;t=349s">L29 05:49</a></h2>
+<p>This linear velocity model defines an Ornstein–Uhlenbeck process, with stationarity when its initial law is the equilibrium Gaussian. Its Gaussian transition kernel at positive time <span class="math">\(t\)</span> has mean <span class="math">\(v_0e^{-\gamma t}\)</span> and variance <span class="math">\(\sigma_v^2(1-e^{-2\gamma t})\)</span>. The shrinking variance as <span class="math">\(t\downarrow0\)</span> gives a point mass at the specified <span class="math">\(v_0\)</span> in the weak limit. Future Brownian increments are independent of the past, so specifying the current velocity suffices for the conditional law of the future. The velocity density <span class="math">\(p(v,t)\)</span> evolves according to the Fokker–Planck equation from <a href="ch11.html">Chapter 11</a>:</p>
+<div class="equation">\[\partial_t p=\gamma\,\partial_v(vp)+\gamma\sigma_v^2\,\partial_v^2 p.\]</div>
+
+<p>Its first term contracts the law toward zero. Its second term spreads probability with diffusivity <span class="math">\(\gamma\sigma_v^2\)</span> in velocity units squared per time. The zero-current stationary solution has the same variance as the transition-law limit. The coincident equilibrium law is a check between the trajectory representation and the density equation.</p>
+<p>In the stationary ensemble, multiply the conditional mean by the initial velocity and average. The covariance is</p>
+<div class="equation">\[C_v(t)=\mathbb E[V_0V_t]=\sigma_v^2e^{-\gamma |t|}.\]</div>
+
+<p>The normalized correlation time here is <span class="math">\(\int_0^\infty C_v(t)/C_v(0)\,dt=1/\gamma\)</span>. Thus an idealized force with zero correlation time drives a velocity with a finite correlation time. The drag and integration filter the impulse noise. In contrast, conditioning on a deterministic initial velocity makes the covariance of the fluctuations depend on both times until the initial preparation is forgotten.</p>
+<h2 id="position-alone-hides-the-velocity-state-l29-1001">Position alone hides the velocity state (<a href="https://www.youtube.com/watch?v=gW_ImQ568Po&amp;t=601s">L29 10:01</a>)</h2>
+<p>Let <span class="math">\(X_t\)</span> be the particle's position on the measured axis, defined by <span class="math">\(dX_t=V_t\,dt\)</span>. The future law given current <span class="math">\((X_t,V_t)\)</span> depends only on these two numbers because the Brownian increments after <span class="math">\(t\)</span> are independent of the past. Position alone generally fails this test. The complete past position record up to time <span class="math">\(t\)</span> determines its left derivative <span class="math">\(V_t\)</span>, since the velocity paths are continuous. At positive time <span class="math">\(t\)</span> a position value by itself leaves velocity uncertain. For example, even with deterministic <span class="math">\(X_0,V_0\)</span>, the two noise integrals have kernels proportional respectively to <span class="math">\(1-e^{-\gamma(t-s)}\)</span> and <span class="math">\(e^{-\gamma(t-s)}\)</span> on the same interval. These functions are linearly independent, so their Gaussian covariance matrix is positive definite by the strict Cauchy–Schwarz inequality. The conditional law of <span class="math">\(V_t\)</span> given <span class="math">\(X_t\)</span> has nonzero variance. But the small-time conditional mean displacement given the full past is <span class="math">\(V_t\,dt+o(dt)\)</span>, which depends on more than <span class="math">\(X_t\)</span>.</p>
+<p>If <span class="math">\(\rho(x,v,t)\)</span> is the joint density, its equation is</p>
+<div class="equation">\[\partial_t\rho=-v\partial_x\rho+
+\gamma\partial_v(v\rho)+\gamma\sigma_v^2\partial_v^2\rho.\]</div>
+
+<p>The new term is advection by the current velocity. Integrating over <span class="math">\(v\)</span> with vanishing boundary flux gives <span class="math">\(\partial_t p_X=-\partial_x J\)</span>, where <span class="math">\(p_X=\int \rho\,dv\)</span> and <span class="math">\(J=\int v\rho\,dv\)</span>. With inertial dynamics this conservation law does not close in <span class="math">\(p_X\)</span> alone. A diffusion approximation supplies a constitutive relation for <span class="math">\(J\)</span> when the observation time is much longer than the velocity relaxation time.</p>
+<h2 id="displacement-crosses-from-ballistic-to-diffusive-l29-2002">Displacement crosses from ballistic to diffusive (<a href="https://www.youtube.com/watch?v=gW_ImQ568Po&amp;t=1202s">L29 20:02</a>)</h2>
+<p>Prepare the velocity in stationarity, with mean zero. Then <span class="math">\(\Delta X_t=X_t-X_0=\int_0^t V_s\,ds\)</span> also has mean zero. Its square integrates a two-time covariance over the square <span class="math">\([0,t]^2\)</span>. Splitting the square into two triangles and changing variables to the lag <span class="math">\(u\)</span> gives</p>
+<div class="equation">\[\begin{aligned}
+\mathbb E[(\Delta X_t)^2]
+&amp;=2\int_0^t(t-u)C_v(u)\,du\\
+&amp;=\frac{2\sigma_v^2}{\gamma}
+\left[t-\frac{1-e^{-\gamma t}}{\gamma}\right].
+\end{aligned}\]</div>
+
+<p>At <span class="math">\(\gamma t\ll1\)</span>, expand the exponential to find <span class="math">\(\mathbb E[(\Delta X_t)^2]=\sigma_v^2 t^2+O(t^3)\)</span> at fixed <span class="math">\(\gamma\)</span>. During this <strong>ballistic</strong> regime the typical displacement is that of an almost unchanged initial velocity. The leading power can differ under a different preparation. With deterministic <span class="math">\(V_0=0\)</span> the first noise-driven position variance has cubic onset because velocity itself must first build from random increments. For <span class="math">\(\gamma t\gg1\)</span>, the mean square grows as <span class="math">\(2Dt\)</span> to leading order, with</p>
+<div class="equation">\[D=\frac{\sigma_v^2}{\gamma}=\frac{k_BT}{m\gamma}.\]</div>
+
+<p>The dimension of <span class="math">\(D\)</span> is length squared per time. Setting the measured mean-square displacement equal to <span class="math">\(2Dt\)</span> too early biases the estimate low. In the same model, the exact ratio <span class="math">\(\mathbb E[(\Delta X_t)^2]/(2t)\)</span> equals <span class="math">\(D[1-(1-e^{-\gamma t})/(\gamma t)]\)</span>. That correction is the testable consequence of the inertial time scale.</p>
+<h2 id="the-diffusion-equation-is-a-long-time-description-l29-2801">The diffusion equation is a long-time description (<a href="https://www.youtube.com/watch?v=gW_ImQ568Po&amp;t=1681s">L29 28:01</a>)</h2>
+<p>In a diffusion model on the real line the probability density <span class="math">\(p(x,t)\)</span> obeys conservation <span class="math">\(\partial_t p=-\partial_x J\)</span>. Fick's constitutive law is <span class="math">\(J=-D\partial_xp\)</span> for constant diffusivity <span class="math">\(D\)</span>, leading to <span class="math">\(\partial_t p=D\partial_x^2p\)</span>. For a point initial condition at <span class="math">\(x_0\)</span> the normalized solution is the Gaussian with mean <span class="math">\(x_0\)</span> and variance <span class="math">\(2Dt\)</span>. More generally, assume boundary terms vanish and moments exist. Integration by parts gives <span class="math">\(\frac{d}{dt}\int xp\,dx=0\)</span> and <span class="math">\(\frac{d}{dt}\int x^2p\,dx=2D\int p\,dx=2D\)</span>. Thus the variance slope follows directly from conservation and the law for the flux. Einstein's treatment derives the diffusion description from independent displacements over intervals assumed large enough to lose microscopic memory. <a href="https://www.damtp.cam.ac.uk/user/gold/pdfs/teaching/old_literature/Einstein1905.pdf">Einstein (1905), §§4–5</a></p>
+<p>The finite-time position increments of the inertial process are correlated through velocity. The position marginal for fixed <span class="math">\(X_0\)</span> and stationary initial velocity is Gaussian, because it is a linear functional of the Gaussian velocity trajectory. Its actual variance is the crossover expression above. Agreement of its large-time variance with the diffusion solution explains the leading large-scale density approximation. A claim about convergence of full rescaled trajectories requires more than agreement of one-time variances.</p>
+<h2 id="state-dependent-noise-and-the-correlation-formula-l29-4401">State-dependent noise and the correlation formula (<a href="https://www.youtube.com/watch?v=gW_ImQ568Po&amp;t=2641s">L29 44:01</a>)</h2>
+<p>For a scalar state <span class="math">\(Y_t\)</span> with Itô equation <span class="math">\(dY_t=f(Y_t)\,dt+g(Y_t)\,dW_t\)</span>, the test-function rule is <span class="math">\(\frac{d}{dt}\mathbb E[\varphi(Y_t)]=\mathbb E[f\varphi&#x27;+g^2\varphi&#x27;&#x27;/2]\)</span> under suitable regularity and integrability. The second term comes from the variance of the Brownian increment in the second-order Taylor term. Integration by parts gives <span class="math">\(\partial_t p=-\partial_y(fp)+\frac12\partial_y^2(g^2p)\)</span>. The placement of <span class="math">\(g^2\)</span> inside the derivative matters when the fluctuations depend on the state. A different stochastic convention for a state-dependent amplitude needs a corresponding drift conversion. For the constant-noise position diffusion model one sets <span class="math">\(f=0\)</span> and <span class="math">\(g=\sqrt{2D}\)</span>.</p>
+<p>The covariance argument extends to a jointly measurable velocity process with zero mean, stationarity, and finite second moments. These assumptions allow the finite-time integrals over the velocity paths and the interchange of the time integrals with expectation. For absolutely integrable <span class="math">\(C_v\)</span>, divide the triangle formula by <span class="math">\(2t\)</span> and use dominated convergence on <span class="math">\((1-u/t)\mathbf1_{u&lt;t}C_v(u)\)</span>. It follows that</p>
+<div class="equation">\[\lim_{t\to\infty}\frac{\mathbb E[(\Delta X_t)^2]}{2t}
+=\int_0^\infty C_v(u)\,du.\]</div>
+
+<p>This velocity-autocorrelation formula is a Green–Kubo relation in the transport setting. It identifies the coefficient from an equilibrium fluctuation measurement, once stationarity and convergence apply. A slowly decaying covariance can invalidate the integral and the ordinary diffusion limit. In the Langevin example the exponential integral recovers <span class="math">\(D=\sigma_v^2/\gamma\)</span> without any fitting. The broader response framework relates equilibrium time fluctuations to transport and susceptibility. <a href="https://doi.org/10.1143/JPSJ.12.570">Kubo (1957)</a></p>
+<h2 id="laboratory">Laboratory</h2>
+<p>Run <a href="../code/ch13.py">the Langevin covariance laboratory</a> with SciPy. It accepts the fixed synthetic parameters <span class="math">\(\gamma=2\)</span> and <span class="math">\(\sigma_v^2=3\)</span> in consistent units. It compares the exact crossover formula with independent numerical quadrature of the covariance integral, and checks the small- and large-time scalings. At <span class="math">\(t=0.5\)</span> the mean-square displacement is <span class="math">\(0.551819\)</span>, while at <span class="math">\(t=5\)</span> it is <span class="math">\(13.500068\)</span>. The covariance integral is <span class="math">\(D=1.5\)</span>. The script tests the algebra and quadrature on the model and uses no simulated physical data.</p>
+<h2 id="exercises">Exercises</h2>
+<ol>
+<li><strong>Check fluctuation–dissipation.</strong> At fixed mass and temperature, double the drag rate. What happens to the noise covariance intensity, equilibrium velocity variance, and spatial diffusivity?</li>
+<li><strong>Compute a transient covariance.</strong> Start at fixed <span class="math">\(V_0=v_0\)</span>. For <span class="math">\(t\ge s\ge0\)</span>, derive the covariance of the velocity at these two times after subtracting each conditional mean.</li>
+<li><strong>Determine the role of preparation.</strong> Start with <span class="math">\(V_0=0\)</span>. Show that the leading short-time displacement variance is <span class="math">\(2\gamma\sigma_v^2t^3/3\)</span>.</li>
+<li><strong>Interpret a noisy camera estimate.</strong> Let the sampling lag satisfy <span class="math">\(\gamma t=1\)</span>. Give the exact ratio of the apparent diffusivity <span class="math">\(\mathbb E[(\Delta X_t)^2]/(2t)\)</span> to <span class="math">\(D\)</span> in the stationary-velocity model.</li>
+<li><strong>Check a long-memory boundary.</strong> Suppose a stationary mean-zero velocity has nonnegative covariance <span class="math">\(C_v(u)=c/(1+u)\)</span> for <span class="math">\(u\ge0\)</span>, with time expressed in fixed units and <span class="math">\(c&gt;0\)</span>. Integrate the covariance formula and determine the leading growth of the mean-square displacement.</li>
+</ol>
+<details>
+<summary>Worked solutions</summary>
+<ol>
+<li>Since <span class="math">\(Q=2m\gamma k_BT\)</span>, the intensity doubles. Equipartition keeps <span class="math">\(\sigma_v^2=k_BT/m\)</span> fixed. The velocity correlation time and <span class="math">\(D=\sigma_v^2/\gamma\)</span> each halve.</li>
+<li>The common noise interval is <span class="math">\([0,s]\)</span>. The later noise increments are independent of the earlier random part. The covariance is <span class="math">\(2\gamma\sigma_v^2\int_0^s e^{-\gamma(t-u)}e^{-\gamma(s-u)}\,du=\sigma_v^2[e^{-\gamma(t-s)}-e^{-\gamma(t+s)}]\)</span>. The second term records the deterministic preparation and vanishes after both times are large.</li>
+<li>Integrating the velocity kernel in time gives the position noise kernel <span class="math">\(\sqrt{2\gamma\sigma_v^2}(1-e^{-\gamma(t-s)})/\gamma\)</span> over <span class="math">\(s\in[0,t]\)</span>. For small <span class="math">\(t\)</span> it is asymptotic to <span class="math">\(\sqrt{2\gamma\sigma_v^2}(t-s)\)</span>. Squaring and integrating yields <span class="math">\(2\gamma\sigma_v^2t^3/3\)</span>. The quadratic term present with stationary initial velocity is absent because the initial velocity is fixed at zero.</li>
+<li>At <span class="math">\(\gamma t=1\)</span> the bracket multiplying <span class="math">\(D\)</span> is <span class="math">\(1-(1-e^{-1})=e^{-1}\)</span>. A lag of one relaxation time is still too short to recover the long-time coefficient directly from the variance ratio.</li>
+<li>Write <span class="math">\((t-u)/(1+u)=(t+1)/(1+u)-1\)</span>. The mean square is <span class="math">\(2c[(t+1)\log(1+t)-t]\)</span>, whose leading term is <span class="math">\(2ct\log t\)</span>. Therefore the ordinary diffusion coefficient defined by the asymptotic variance ratio is not finite in this example.</li>
+</ol>
+</details>
+<h2 id="sources-and-continuation">Sources and continuation</h2>
+<ul>
+<li><a href="../source-map.html#l28">Original lectures 28–29</a></li>
+<li><a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.36.823">Uhlenbeck and Ornstein, on the theory of Brownian motion</a></li>
+<li><a href="https://www.damtp.cam.ac.uk/user/gold/pdfs/teaching/old_literature/Einstein1905.pdf">Einstein, diffusion and the motion of suspended particles, §§4–5</a></li>
+<li><a href="https://doi.org/10.1143/JPSJ.12.570">Kubo, statistical mechanics of irreversible processes</a></li>
+</ul><nav class="chapter-nav" aria-label="Chapter order"><a href="../chapters/ch12.html">← Previous chapter</a></nav></main>
+<footer>Independent study edition · <a href="https://nptel.ac.in/courses/115106059">NPTEL course</a></footer>
+</body>
+</html>

@@ -1,0 +1,30 @@
+lecture,video_id,title,duration_seconds,source_basis,caption_track,caption_sha256,caption_start,caption_end
+1,nh4TFzg30eQ,Mod-01 Lec-01 Overview,3334,YouTube English ASR captions,en-orig,1880f4d5e791b1918840a1a6105542c1f01b0b5d075b7ce6a5658849576fe3aa,0,3333
+2,Qoi5Vs50WVU,Mod-01 Lec-02 Critical points of a dynamical system,3619,YouTube English ASR captions,en-orig,5e1e83cfd482d18afe76310b4c38de2e5bc6185a90d34b19b1cb75c8e9ff6e73,0,3620
+3,-Eas42UZ32s,Mod-01 Lec-03 Two-dimensional flows,3561,YouTube English ASR captions,en-orig,b6e77327c7d34f0e58553479c14abd4a03142ced4f2c269c3ba3673b4cc057b1,0,3562
+4,rWvj-okJ0IE,Mod-01 Lec-04 Stable and unstable manifolds,3622,YouTube English ASR captions,en-orig,c765f56137e6a0ece440d03768da5212c911293da5f46029e6150d42f798f243,14,3622
+5,szD1uzTBzZ4,Mod-01 Lec-05 Hamiltonian dynamics (Part I),3538,YouTube English ASR captions,en-orig,74751bea501748377b620ac944d905b546c4cc82f9b64870ccf59ed1db88827f,0,3539
+6,ZGlXIyBCwnc,Mod-01 Lec-06 Hamiltonian dynamics (Part II),3835,YouTube English ASR captions,en-orig,d429eea830af7324403c8e6c2e4f42cd1dc1c813daee2182e121965c39677c64,0,3836
+7,haN6NswqI58,Mod-01 Lec-07 Hamiltonian dynamics (Part III),3731,YouTube English ASR captions,en-orig,a8339b1d3ece73d5f45ef6dfe3cfed3ffa85e74c634f255887c61fb228ca741e,0,3731
+8,MZ9tnuRaVNY,Mod-01 Lec-08 Hamiltonian dynamics (Part IV),3621,YouTube English ASR captions,en-orig,e414172cee9d5242880ad6a093a6377cea8618cbc71b369c320fdfa677754150,14,3622
+9,dqGKB3Rd5g0,Mod-01 Lec-09 Hamiltonian dynamics (Part V),3763,YouTube English ASR captions,en-orig,4501dfc7f0139bdc41bcaaaf7b10319868ef09267982bc320e65b1f3dbb9aa84,11,3733
+10,i-xIDn9i8qA,Mod-01 Lec-10 Elementary bifurcations,2713,YouTube English ASR captions,en-orig,df291833ef3589edbb73070a66cdae8b3c3e1c0a6b18af9b8964582c9e00258f,13,2714
+11,EocHy9kufpA,Mod-01 Lec-11 Limit cycles,2397,YouTube English ASR captions,en-orig,4c175701d14af00a53833d8f999f6a48d2490abaf373ea4cf36604a850931a69,12,2397
+12,CQD2a8ycHis,Mod-01 Lec-12 Poincar´e index,3255,YouTube English ASR captions,en-orig,cca75a4f28e42967edb7fee6c166103f6d0291467c61544cad4e9f2827edfd67,12,3232
+13,AoXLncutE5g,Mod-01 Lec-13 Illustrative examples,3466,YouTube English ASR captions,en-orig,a26519dca0bb2235799578d20ee9c1d8419a61ebb4c21d7f83b0ae89b62ddc34,0,3466
+14,8eKFUwPu4MM,Mod-01 Lec-14 Quiz 1. Questions and answers,3552,YouTube English ASR captions,en-orig,4ba58fd93b8d01366934a66a3559a0940efcbe509bc9536dc8b6359e69300a4a,12,3553
+15,8qbR7SsJB9U,Mod-01 Lec-15 Bead on a rotating hoop,4020,YouTube English ASR captions,en-orig,97676aaaf2fa5c952bf4be91880f62561d29a95b12fde34007c50d113028d603,0,4021
+16,FXJxdczeTpg,Mod-01 Lec-16 Types of dynamical behaviour,3579,YouTube English ASR captions,en-orig,8e8dc3cef52fa2510b0f193b218d1b5110dc04c3c61094bab46984316a6d902d,13,3580
+17,bKuDEQrVV1E,Mod-01 Lec-17 Discrete time dynamics (Part I),3475,YouTube English ASR captions,en-orig,7e767501c3242e2fc22e1768268b9c72727e699633ca55e27f513ff5d73ac965,12,3476
+18,ucXcLx-yZIE,Mod-01 Lec-18 Discrete time dynamics(Part II),3800,YouTube English ASR captions,en-orig,6e56691bc1268a533a47c81576772749c76b694862ea2dfc9647bee4066c14c6,13,3790
+19,3klI2Jv3brU,Mod-01 Lec-19 Discrete time dynamics (Part III),4058,YouTube English ASR captions,en-orig,8e5abf8d7111c8f6a67eff3a2ca61e3a54474d222635dcd9f85cc6e8d297ecd7,12,4036
+20,wqnQp5C4gTk,Mod-01 Lec-20 Discrete time dynamics (Part IV),3878,YouTube English ASR captions,en-orig,88e11b19068e8f2745d3f12cd0305d2d3a0d13b6d1f43dc9113f8ce91beeed4f,0,3878
+21,Haxy2Mh2GQ8,Mod-01 Lec-21 Coarse-grained dynamics in phase space (Part I),3977,YouTube English ASR captions,en-orig,c0426e0e563d9360bc5c50f57bdc9bf279ebffe61c5361a6dece6bfecc4514f3,12,3978
+22,NQ478COyIQs,Mod-01 Lec-22 Coarse-grained dynamics in phase space (Part II),4027,YouTube English ASR captions,en-orig,ae4c34048cdb4fa69257b1506b9e7de57a903b4feb805180830edc9830832f5c,13,4007
+23,OqBRWt0UqXE,Mod-01 Lec-23 Stochastic dynamics (Part II),3454,YouTube English ASR captions,en-orig,4a538723923803b90c82576a3920fa837f715d1f77b88b8a47271618878152e5,13,3454
+24,9-Qqa2OgM48,Mod-01 Lec-24 Stochastic dynamics (Part III),3647,YouTube English ASR captions,en-orig,da00d2d72bf7bb246a17ad767c258386064349fbeadacbf127caeced85ca8532,0,3647
+25,XLHZju11YJY,Mod-01 Lec-25 Coarse-grained dynamics in phase space (Part IV),3894,YouTube English ASR captions,en-orig,40ccb4ce67fa393346ae1a74d9476f787a54303d8d1fcd96f5e63d2a4ed813ef,14,3895
+26,4NT5284y3iE,Mod-01 Lec-26 Discrete time dynamics (Part V),4266,YouTube English ASR captions,en-orig,eb968febf8c54c9cedca7512f85d8d183a7273e511df703581d68db7f40ff6ed,14,4266
+27,w902ShzD__g,Mod-01 Lec-27 Quiz 2. Questions and answers,3135,YouTube English ASR captions,en-orig,f18a4c40755318cbef4faa7dcfe7ed7c2ce58e702a5f806d56927abce44a4320,11,3114
+28,4EAPQtw1Bis,Mod-01 Lec-28 Stochastic dynamics (Part V),3516,YouTube English ASR captions,en-orig,d32b282bc1004813479de6175a3bfdb61d250d81b67550e1ab2ab43259fe4774,12,3517
+29,gW_ImQ568Po,Mod-01 Lec-29 Stochastic dynamics (Part VI),3428,YouTube English ASR captions,en-orig,a2ecc03f2bbaad545d989c24b35320b98e34dbd0c546b6159213fd155f6316b5,12,3429

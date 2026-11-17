@@ -1,0 +1,99 @@
+{
+  "preview": false,
+  "lectures_in_inventory": 29,
+  "pages_checked": 17,
+  "chapters": [
+    {
+      "chapter": 1,
+      "manuscript_sha256": "1a3caaabe545a1b928d254ef2c7eaf4614da34436ea6bdad12d7d000c0726914",
+      "lecture_timestamps": 13,
+      "lab_sha256": "86dafe7547ffedd4e65673573182f97fed6450cf16ef9031fc031b55f71f2c75",
+      "lab_stdout": "Critically damped bead at t=1: q=0.367879, v=0.000000\nScalar flow at t=0.49 from q=2: q=100.0\n"
+    },
+    {
+      "chapter": 2,
+      "manuscript_sha256": "2c96bdb8dbde268e94831365d7e21d46095a52274b8496800872136f627d5f8c",
+      "lecture_timestamps": 8,
+      "lab_sha256": "7a12e86c2b91f742761c7d617f8686fab332341509e092cdb1ec4ddaf5e6665c",
+      "lab_stdout": "Planar eigenvalues, curved separatrix, and weighted area verified.\n"
+    },
+    {
+      "chapter": 3,
+      "manuscript_sha256": "880b4de1e5694741dedc8d28fb1b13ef64f472bb2ddd23050947f0a14d3a22ab",
+      "lecture_timestamps": 9,
+      "lab_sha256": "4e91c85ce0170c5b496426859b0a9a426423a974ff61bbf0a133c889a9215946",
+      "lab_stdout": "Euler energy growth and kick–drift modified energy verified.\n"
+    },
+    {
+      "chapter": 4,
+      "manuscript_sha256": "97a7b9c6143a52e2c1bb21cb7524813f928eb024903b6ef8c1975a32c6f37312",
+      "lecture_timestamps": 13,
+      "lab_sha256": "d79112652d5f1866db6aa17a2076a27bc40df8d1a8634e2be569842b56f0094c",
+      "lab_stdout": "Action derivative, period scaling, and oscillator invariants verified.\n"
+    },
+    {
+      "chapter": 5,
+      "manuscript_sha256": "b29c45ffc6aebbdca62d665bea2059aeca99e8aa6a574de82a5ea24a0b561c10",
+      "lecture_timestamps": 12,
+      "lab_sha256": "34b8a64765c5d5e915fcf2649458e3215461de6dd240233e42f18eb7a4cb6a4c",
+      "lab_stdout": "Fold delay, imperfect pitchfork, and Hopf multiplier verified.\n"
+    },
+    {
+      "chapter": 6,
+      "manuscript_sha256": "4eccceaea4122717c48f72b3759b8bceeb3e2f5529c6c0da521522a2c13d1ce5",
+      "lecture_timestamps": 8,
+      "lab_sha256": "6fea1120c2bb558053abc1c948c76fe3ad5c6a95ab4a569b6154b4bce7386bde",
+      "lab_stdout": "Duffing indices (left, saddle, right, all): [1, -1, 1, 1]\nRight-well final energy: -0.250000\n"
+    },
+    {
+      "chapter": 7,
+      "manuscript_sha256": "186dcd4e965e742d52b167417d7e2f33e1b7b27051512c0e3fcca9fccd7218a5",
+      "lecture_timestamps": 10,
+      "lab_sha256": "4adafde6d8092ff7f10d1e158a643325852588a35f126389487576a1ffc7d900",
+      "lab_stdout": "Side angle at normalized spin 1.2: 0.803149 rad\nBottom period at spin 0.8 and amplitude 0.03: 10.469425\nCritical period ratio on halving amplitude: 1.999630\n"
+    },
+    {
+      "chapter": 8,
+      "manuscript_sha256": "699103c6d46250a085c13336b7278cd39f303e680438ce8c05f6a8029748e956",
+      "lecture_timestamps": 12,
+      "lab_sha256": "67457c60431fbf59da3c76951322109532e23d0f75e8b27b2a8ed67bbc5f569a",
+      "lab_stdout": "Doubling two-cycle: 1/3 <-> 2/3\nLogistic two-cycle at mu=3.2: 0.513045, 0.799455\nTwo-step multiplier: 0.160000\n"
+    },
+    {
+      "chapter": 9,
+      "manuscript_sha256": "722babb70904ca8937509186460ffb89d4f12ef81227c3f8147c82620b040331",
+      "lecture_timestamps": 12,
+      "lab_sha256": "8452f860e51add87dc6c4934cde2ef2812b6a24621451166e32f979a00df8fb4",
+      "lab_stdout": "Channel epsilon=0.0001: 295 steps\nChannel epsilon=2.5e-05: 609 steps\nLogistic lower-quarter mass: 0.333333\nBaker map: exact recovery after five steps\n"
+    },
+    {
+      "chapter": 10,
+      "manuscript_sha256": "ad10e21fbbfe96c0f87aa60edd81561a10064c77e26742d94d6511ff3ab341de",
+      "lecture_timestamps": 6,
+      "lab_sha256": "46a958168b2265978477792fbd2c5bbd5fd01f3cfa838b2b76776499ecd58230",
+      "lab_stdout": "bins    D_1 finite    D_2 finite    D_4 finite\n  256     0.960883      0.881179      0.729771\n 4096     0.971700      0.890118      0.708913\n65536     0.978358      0.899271      0.698362\n"
+    },
+    {
+      "chapter": 11,
+      "manuscript_sha256": "5f29df8fab35b582f83682a5f82debb2d77fdaf06bc0ddfc0ff5ae9d6a7fde6d",
+      "lecture_timestamps": 6,
+      "lab_sha256": "ce9b52bfd32b4396b1917272e516ef0c7016559865280964df9b798f4601801d",
+      "lab_stdout": "n    explicit cylinder mass / initial mass\n1    1/4\n2    3/16\n3    9/64\n4    27/256\n5    81/1024\n6    243/4096\n7    729/16384\n8    2187/65536\np_1(1) from state 1 = 0.366525\n"
+    },
+    {
+      "chapter": 12,
+      "manuscript_sha256": "94972f38ea3732415d340fe09f77974b73e2fccfdf5ab120e68d709077162688",
+      "lecture_timestamps": 8,
+      "lab_sha256": "654edfc19f885a0523ba7108af2c3df053d57257087192bc2fed18f2022e4b00",
+      "lab_stdout": "Denominator 5: 1 fixed point and 2 exact period-2 cycles\nGlass heights after one cycle: 5, 6, 5\n"
+    },
+    {
+      "chapter": 13,
+      "manuscript_sha256": "def288b6ebea5670127604eebd3c0ebfddbccb89040e975ac22994421114ecce",
+      "lecture_timestamps": 8,
+      "lab_sha256": "5397fb13ee2b3620393ab65bff69d31ad6d31e2e94beb463a5b2f39eab94ce2f",
+      "lab_stdout": "t= 0.001, mean square displacement=0.000003\nt= 0.500, mean square displacement=0.551819\nt= 5.000, mean square displacement=13.500068\nt=50.000, mean square displacement=148.500000\nD = 1.500000\n"
+    }
+  ],
+  "static_reader_rebuild_identical": true
+}

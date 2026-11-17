@@ -1,0 +1,501 @@
+{
+  "preview": false,
+  "artifacts": [
+    {
+      "path": "chapters/ch01.html",
+      "purpose": "Reading edition",
+      "source_dependencies": [
+        "L01",
+        "L02"
+      ]
+    },
+    {
+      "path": "chapters/ch01.md",
+      "purpose": "Editable manuscript",
+      "source_dependencies": [
+        "L01",
+        "L02"
+      ]
+    },
+    {
+      "path": "code/ch01.py",
+      "purpose": "Reproducible model check",
+      "source_dependencies": [
+        "L01",
+        "L02"
+      ]
+    },
+    {
+      "path": "chapters/ch02.html",
+      "purpose": "Reading edition",
+      "source_dependencies": [
+        "L03",
+        "L04"
+      ]
+    },
+    {
+      "path": "chapters/ch02.md",
+      "purpose": "Editable manuscript",
+      "source_dependencies": [
+        "L03",
+        "L04"
+      ]
+    },
+    {
+      "path": "code/ch02.py",
+      "purpose": "Reproducible model check",
+      "source_dependencies": [
+        "L03",
+        "L04"
+      ]
+    },
+    {
+      "path": "chapters/ch03.html",
+      "purpose": "Reading edition",
+      "source_dependencies": [
+        "L05",
+        "L06"
+      ]
+    },
+    {
+      "path": "chapters/ch03.md",
+      "purpose": "Editable manuscript",
+      "source_dependencies": [
+        "L05",
+        "L06"
+      ]
+    },
+    {
+      "path": "code/ch03.py",
+      "purpose": "Reproducible model check",
+      "source_dependencies": [
+        "L05",
+        "L06"
+      ]
+    },
+    {
+      "path": "chapters/ch04.html",
+      "purpose": "Reading edition",
+      "source_dependencies": [
+        "L07",
+        "L08",
+        "L09"
+      ]
+    },
+    {
+      "path": "chapters/ch04.md",
+      "purpose": "Editable manuscript",
+      "source_dependencies": [
+        "L07",
+        "L08",
+        "L09"
+      ]
+    },
+    {
+      "path": "code/ch04.py",
+      "purpose": "Reproducible model check",
+      "source_dependencies": [
+        "L07",
+        "L08",
+        "L09"
+      ]
+    },
+    {
+      "path": "chapters/ch05.html",
+      "purpose": "Reading edition",
+      "source_dependencies": [
+        "L10",
+        "L11"
+      ]
+    },
+    {
+      "path": "chapters/ch05.md",
+      "purpose": "Editable manuscript",
+      "source_dependencies": [
+        "L10",
+        "L11"
+      ]
+    },
+    {
+      "path": "code/ch05.py",
+      "purpose": "Reproducible model check",
+      "source_dependencies": [
+        "L10",
+        "L11"
+      ]
+    },
+    {
+      "path": "chapters/ch06.html",
+      "purpose": "Reading edition",
+      "source_dependencies": [
+        "L12",
+        "L13",
+        "L14"
+      ]
+    },
+    {
+      "path": "chapters/ch06.md",
+      "purpose": "Editable manuscript",
+      "source_dependencies": [
+        "L12",
+        "L13",
+        "L14"
+      ]
+    },
+    {
+      "path": "code/ch06.py",
+      "purpose": "Reproducible model check",
+      "source_dependencies": [
+        "L12",
+        "L13",
+        "L14"
+      ]
+    },
+    {
+      "path": "chapters/ch07.html",
+      "purpose": "Reading edition",
+      "source_dependencies": [
+        "L15",
+        "L16"
+      ]
+    },
+    {
+      "path": "chapters/ch07.md",
+      "purpose": "Editable manuscript",
+      "source_dependencies": [
+        "L15",
+        "L16"
+      ]
+    },
+    {
+      "path": "code/ch07.py",
+      "purpose": "Reproducible model check",
+      "source_dependencies": [
+        "L15",
+        "L16"
+      ]
+    },
+    {
+      "path": "chapters/ch08.html",
+      "purpose": "Reading edition",
+      "source_dependencies": [
+        "L17",
+        "L18"
+      ]
+    },
+    {
+      "path": "chapters/ch08.md",
+      "purpose": "Editable manuscript",
+      "source_dependencies": [
+        "L17",
+        "L18"
+      ]
+    },
+    {
+      "path": "code/ch08.py",
+      "purpose": "Reproducible model check",
+      "source_dependencies": [
+        "L17",
+        "L18"
+      ]
+    },
+    {
+      "path": "chapters/ch09.html",
+      "purpose": "Reading edition",
+      "source_dependencies": [
+        "L19",
+        "L20"
+      ]
+    },
+    {
+      "path": "chapters/ch09.md",
+      "purpose": "Editable manuscript",
+      "source_dependencies": [
+        "L19",
+        "L20"
+      ]
+    },
+    {
+      "path": "code/ch09.py",
+      "purpose": "Reproducible model check",
+      "source_dependencies": [
+        "L19",
+        "L20"
+      ]
+    },
+    {
+      "path": "chapters/ch10.html",
+      "purpose": "Reading edition",
+      "source_dependencies": [
+        "L21",
+        "L22"
+      ]
+    },
+    {
+      "path": "chapters/ch10.md",
+      "purpose": "Editable manuscript",
+      "source_dependencies": [
+        "L21",
+        "L22"
+      ]
+    },
+    {
+      "path": "code/ch10.py",
+      "purpose": "Reproducible model check",
+      "source_dependencies": [
+        "L21",
+        "L22"
+      ]
+    },
+    {
+      "path": "chapters/ch11.html",
+      "purpose": "Reading edition",
+      "source_dependencies": [
+        "L23",
+        "L24",
+        "L25"
+      ]
+    },
+    {
+      "path": "chapters/ch11.md",
+      "purpose": "Editable manuscript",
+      "source_dependencies": [
+        "L23",
+        "L24",
+        "L25"
+      ]
+    },
+    {
+      "path": "code/ch11.py",
+      "purpose": "Reproducible model check",
+      "source_dependencies": [
+        "L23",
+        "L24",
+        "L25"
+      ]
+    },
+    {
+      "path": "chapters/ch12.html",
+      "purpose": "Reading edition",
+      "source_dependencies": [
+        "L26",
+        "L27"
+      ]
+    },
+    {
+      "path": "chapters/ch12.md",
+      "purpose": "Editable manuscript",
+      "source_dependencies": [
+        "L26",
+        "L27"
+      ]
+    },
+    {
+      "path": "code/ch12.py",
+      "purpose": "Reproducible model check",
+      "source_dependencies": [
+        "L26",
+        "L27"
+      ]
+    },
+    {
+      "path": "chapters/ch13.html",
+      "purpose": "Reading edition",
+      "source_dependencies": [
+        "L28",
+        "L29"
+      ]
+    },
+    {
+      "path": "chapters/ch13.md",
+      "purpose": "Editable manuscript",
+      "source_dependencies": [
+        "L28",
+        "L29"
+      ]
+    },
+    {
+      "path": "code/ch13.py",
+      "purpose": "Reproducible model check",
+      "source_dependencies": [
+        "L28",
+        "L29"
+      ]
+    },
+    {
+      "path": "index.html",
+      "purpose": "Course catalog and chapter search",
+      "source_dependencies": [
+        "L01",
+        "L02",
+        "L03",
+        "L04",
+        "L05",
+        "L06",
+        "L07",
+        "L08",
+        "L09",
+        "L10",
+        "L11",
+        "L12",
+        "L13",
+        "L14",
+        "L15",
+        "L16",
+        "L17",
+        "L18",
+        "L19",
+        "L20",
+        "L21",
+        "L22",
+        "L23",
+        "L24",
+        "L25",
+        "L26",
+        "L27",
+        "L28",
+        "L29"
+      ]
+    },
+    {
+      "path": "study-guide.html",
+      "purpose": "Learning sequence and official course resources",
+      "source_dependencies": [
+        "L01",
+        "L02",
+        "L03",
+        "L04",
+        "L05",
+        "L06",
+        "L07",
+        "L08",
+        "L09",
+        "L10",
+        "L11",
+        "L12",
+        "L13",
+        "L14",
+        "L15",
+        "L16",
+        "L17",
+        "L18",
+        "L19",
+        "L20",
+        "L21",
+        "L22",
+        "L23",
+        "L24",
+        "L25",
+        "L26",
+        "L27",
+        "L28",
+        "L29"
+      ]
+    },
+    {
+      "path": "source-map.html",
+      "purpose": "Recordings in playlist order",
+      "source_dependencies": [
+        "L01",
+        "L02",
+        "L03",
+        "L04",
+        "L05",
+        "L06",
+        "L07",
+        "L08",
+        "L09",
+        "L10",
+        "L11",
+        "L12",
+        "L13",
+        "L14",
+        "L15",
+        "L16",
+        "L17",
+        "L18",
+        "L19",
+        "L20",
+        "L21",
+        "L22",
+        "L23",
+        "L24",
+        "L25",
+        "L26",
+        "L27",
+        "L28",
+        "L29"
+      ]
+    },
+    {
+      "path": "lecture-inventory.csv",
+      "purpose": "Caption and playlist provenance in tabular form",
+      "source_dependencies": [
+        "L01",
+        "L02",
+        "L03",
+        "L04",
+        "L05",
+        "L06",
+        "L07",
+        "L08",
+        "L09",
+        "L10",
+        "L11",
+        "L12",
+        "L13",
+        "L14",
+        "L15",
+        "L16",
+        "L17",
+        "L18",
+        "L19",
+        "L20",
+        "L21",
+        "L22",
+        "L23",
+        "L24",
+        "L25",
+        "L26",
+        "L27",
+        "L28",
+        "L29"
+      ]
+    },
+    {
+      "path": "laboratory.html",
+      "purpose": "Index of computational laboratories",
+      "source_dependencies": [
+        "L01",
+        "L02",
+        "L03",
+        "L04",
+        "L05",
+        "L06",
+        "L07",
+        "L08",
+        "L09",
+        "L10",
+        "L11",
+        "L12",
+        "L13",
+        "L14",
+        "L15",
+        "L16",
+        "L17",
+        "L18",
+        "L19",
+        "L20",
+        "L21",
+        "L22",
+        "L23",
+        "L24",
+        "L25",
+        "L26",
+        "L27",
+        "L28",
+        "L29"
+      ]
+    }
+  ]
+}

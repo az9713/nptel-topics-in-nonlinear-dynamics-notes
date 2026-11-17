@@ -1,0 +1,16 @@
+/work/
+/README.txt
+/EDITOR_DOMAIN.md
+/tools/sources.py
+/validation/live-*.json
+/__pycache__/
+__pycache__/
+*.pyc
+*.mp4
+*.webm
+*.m4a
+*.vtt
+*.srt
+*.json3
+*.part
+.venv/
